@@ -1,3 +1,5 @@
+
+import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MatrixRain } from "@/components/MatrixRain";
@@ -6,6 +8,8 @@ import { Shield, Terminal, Code, Globe, Server, Lock } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   const services = [
     { icon: Shield, title: "Penetration Testing", description: "Comprehensive security assessments to identify vulnerabilities" },
     { icon: Terminal, title: "Security Auditing", description: "In-depth analysis of system security configurations" },
@@ -24,6 +28,10 @@ const Index = () => {
     { icon: Lock, title: "Encryption Protocols" },
   ];
 
+  const handleGetInTouch = () => {
+    navigate("/contact");
+  };
+
   return (
     <div className="min-h-screen w-full relative overflow-hidden">
       <Navigation />
@@ -38,7 +46,10 @@ const Index = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Cybersecurity Expert & Ethical Hacker
           </p>
-          <Button className="bg-primary hover:bg-primary/90 text-white">
+          <Button 
+            className="bg-primary hover:bg-primary/90 text-white"
+            onClick={handleGetInTouch}
+          >
             Get In Touch
           </Button>
         </div>
@@ -104,3 +115,4 @@ const Index = () => {
 };
 
 export default Index;
+
