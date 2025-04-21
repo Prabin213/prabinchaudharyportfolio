@@ -2,7 +2,7 @@
 import { Navigation } from "@/components/Navigation";
 import { MatrixRain } from "@/components/MatrixRain";
 import { Card } from "@/components/ui/card";
-import { ShieldCheck, Bug, Network, Cloud, Activity, Face } from "lucide-react";
+import { ShieldCheck, Bug, Network, Cloud, Activity, UserRound } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -52,7 +52,7 @@ const Projects = () => {
       description: "A powerful network traffic analysis tool designed to detect and analyze potential security threats in real-time."
     },
     {
-      icon: Face,
+      icon: UserRound,
       title: "Facial Authentication System",
       description: "A secure, web-based facial recognition system implementing advanced biometric authentication protocols."
     }
@@ -79,4 +79,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
