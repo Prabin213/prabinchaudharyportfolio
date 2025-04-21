@@ -1,3 +1,4 @@
+
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -20,6 +21,13 @@ const NotFound = () => {
           Return to Home
         </a>
       </div>
+
+      {/* Copyright Section */}
+      <footer className="absolute bottom-0 w-full py-6 px-4 text-center bg-black/20">
+        <p className="text-sm text-[#8E9196] font-['Fira_Code']">
+          © 1998 Prabin Chaudhary. Engineer. All Rights Reserved.
+        </p>
+      </footer>
     </div>
   );
 };
