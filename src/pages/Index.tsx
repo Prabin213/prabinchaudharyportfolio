@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MatrixRain } from "@/components/MatrixRain";
 import { TypingEffect } from "@/components/TypingEffect";
-import { Shield, Terminal, Code, Globe, Server, Lock } from "lucide-react";
+import { Shield, Terminal, Code, Globe, Server, Lock, BookOpen } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
@@ -25,6 +25,24 @@ const Index = () => {
     { icon: Globe, title: "Network Security" },
     { icon: Server, title: "System Hardening" },
     { icon: Lock, title: "Encryption Protocols" },
+  ];
+
+  const courses = [
+    { 
+      icon: BookOpen, 
+      title: "Ethical Hacking Fundamentals", 
+      description: "Learn the basics of ethical hacking and penetration testing" 
+    },
+    { 
+      icon: Terminal, 
+      title: "Advanced Network Security", 
+      description: "Deep dive into network security protocols and defense strategies" 
+    },
+    { 
+      icon: Shield, 
+      title: "Cybersecurity Certification Prep", 
+      description: "Comprehensive preparation for industry-standard cybersecurity certifications" 
+    }
   ];
 
   const handleGetInTouch = () => {
@@ -106,18 +124,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Courses Section */}
+      <section className="relative z-10 py-20 px-6 bg-black/20">
+        <h2 className="text-3xl font-bold text-center mb-12 text-primary">Cybersecurity Courses</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {courses.map((course, index) => (
+            <Card key={index} className="glass p-6 animate-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
+              <course.icon className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-bold mb-4">{course.title}</h3>
+              <p className="text-muted-foreground">{course.description}</p>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Services Section */}
       <section className="relative z-10 py-20 px-6">
-        <div className="max-w-2xl mx-auto terminal">
-          <h2 className="text-2xl font-bold mb-6 text-primary">Initialize Contact Protocol</h2>
-          <div className="space-y-4">
-            <p className="text-muted-foreground">
-              <span className="text-primary">$</span> For secure communication channel:
-            </p>
-            <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-              Execute Contact Sequence
-            </Button>
-          </div>
+        <h2 className="text-3xl font-bold text-center mb-12 text-primary">Security Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {services.map((service, index) => (
+            <Card key={index} className="glass p-6 animate-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
+              <service.icon className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+              <p className="text-muted-foreground">{service.description}</p>
+            </Card>
+          ))}
         </div>
       </section>
 
