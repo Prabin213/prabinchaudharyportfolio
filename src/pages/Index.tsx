@@ -1,9 +1,9 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MatrixRain } from "@/components/MatrixRain";
 import { TypingEffect } from "@/components/TypingEffect";
 import { Shield, Terminal, Code, Globe, Server, Lock } from "lucide-react";
+import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
   const services = [
@@ -26,10 +26,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen w-full relative overflow-hidden">
+      <Navigation />
       <MatrixRain />
       
-      {/* Hero Section */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center p-6">
+      {/* Hero Section - Added pt-20 to push content below navbar */}
+      <section className="relative z-10 min-h-screen flex items-center justify-center p-6 pt-20">
         <div className="text-center space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold text-primary animate-glow mb-4">
             <TypingEffect text="Security First, Always." delay={100} />
@@ -43,8 +44,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Remaining sections keep existing code */}
       {/* Skills Section */}
-      <section className="relative z-10 py-20 px-6">
+      <section className="relative z-10 py-20 px-6 pt-24">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">Technical Arsenal</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
