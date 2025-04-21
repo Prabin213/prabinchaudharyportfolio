@@ -35,6 +35,11 @@ export const Navigation = () => {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
+              <Link to="/courses" className={cn(navigationMenuTriggerStyle(), "text-white hover:text-primary")}>
+                Courses
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <Link to="/contact" className={cn(navigationMenuTriggerStyle(), "text-white hover:text-primary")}>
                 Contact
               </Link>
