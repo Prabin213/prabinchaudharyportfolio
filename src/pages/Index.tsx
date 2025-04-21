@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -37,7 +36,6 @@ const Index = () => {
       <Navigation />
       <MatrixRain />
       
-      {/* Hero Section - Added pt-20 to push content below navbar */}
       <section className="relative z-10 min-h-screen flex items-center justify-center p-6 pt-20">
         <div className="text-center space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold text-primary animate-glow mb-4">
@@ -52,10 +50,22 @@ const Index = () => {
           >
             Get In Touch
           </Button>
+          
+          {/* New Hacking Quotes Section */}
+          <div className="mt-8 max-w-2xl mx-auto bg-black/30 p-6 rounded-lg border border-primary/30">
+            <h3 className="text-xl font-bold text-primary mb-4">Cybersecurity Insights</h3>
+            <div className="space-y-4 font-['Fira_Code'] text-muted-foreground">
+              <blockquote className="italic border-l-4 border-primary pl-4">
+                "Amateurs hack systems; professionals hack people."
+              </blockquote>
+              <blockquote className="italic border-l-4 border-primary pl-4">
+                "No technology that's connected to the internet is unhackable."
+              </blockquote>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Remaining sections keep existing code */}
       {/* Skills Section */}
       <section className="relative z-10 py-20 px-6 pt-24">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">Technical Arsenal</h2>
@@ -115,4 +125,3 @@ const Index = () => {
 };
 
 export default Index;
-
