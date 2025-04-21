@@ -120,6 +120,13 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Copyright Section */}
+      <footer className="relative z-10 py-6 px-4 text-center bg-black/20">
+        <p className="text-sm text-[#8E9196] font-['Fira_Code']">
+          © 1998 Prabin Chaudhary. Engineer. All Rights Reserved.
+        </p>
+      </footer>
     </div>
   );
 };
